@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🎮 JavaScript Interactive Playground</h1>
+            <p>Explore events, interactive elements, and form validation</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 🎉 Part 1: Event Handling -->
+        <section class="section" id="event-handling">
+            <h2>🎉 Event Handling Demonstrations</h2>
+            
+            <div class="demo-grid">
+                <!-- Click Events -->
+                <div class="demo-card">
+                    <h3>Click Events</h3>
+                    <button id="clickDemo" class="demo-button">Click Me!</button>
+                    <p id="clickMessage" class="demo-message">Click the button to see a message</p>
+                </div>
+
+                <!-- Mouse Events -->
+                <div class="demo-card">
+                    <h3>Mouse Events</h3>
+                    <div id="mouseArea" class="interactive-area">
+                        Hover over me!
+                    </div>
+                    <p id="mouseMessage" class="demo-message">Mouse events will appear here</p>
+                </div>
+
+                <!-- Keyboard Events -->
+                <div class="demo-card">
+                    <h3>Keyboard Events</h3>
+                    <input type="text" id="keyboardInput" placeholder="Type something here...">
+                    <p id="keyboardMessage" class="demo-message">Key events will appear here</p>
+                </div>
+
+                <!-- Form Events -->
+                <div class="demo-card">
+                    <h3>Form Events</h3>
+                    <input type="text" id="liveInput" placeholder="Type and watch...">
+                    <p id="liveMessage" class="demo-message">Text will appear here as you type</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🎮 Part 2: Interactive Elements -->
+        <section class="section" id="interactive-elements">
+            <h2>🎮 Interactive Elements</h2>
+            
+            <!-- Theme Toggle -->
+            <div class="feature-card">
+                <h3>🌓 Light/Dark Mode Toggle</h3>
+                <button id="themeToggle" class="toggle-button">Toggle Dark Mode</button>
+                <p>Current theme: <span id="themeStatus">Light</span></p>
+            </div>
+
+            <!-- Counter Game -->
+            <div class="feature-card">
+                <h3>🔢 Counter Game</h3>
+                <div class="counter-container">
+                    <button id="decreaseBtn" class="counter-btn">-</button>
+                    <span id="counterValue" class="counter-value">0</span>
+                    <button id="increaseBtn" class="counter-btn">+</button>
+                </div>
+                <button id="resetCounter" class="secondary-btn">Reset Counter</button>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="feature-card">
+                <h3>❓ Interactive FAQ</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What is JavaScript?</button>
+                        <div class="faq-answer">
+                            <p>JavaScript is a programming language that enables interactive web pages.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What are events in JavaScript?</button>
+                        <div class="faq-answer">
+                            <p>Events are actions that occur in the browser, like clicks, key presses, or page loads.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is DOM manipulation?</button>
+                        <div class="faq-answer">
+                            <p>DOM manipulation involves changing HTML elements, attributes, and styles using JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabbed Interface -->
+            <div class="feature-card">
+                <h3>📑 Tabbed Interface</h3>
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">HTML</button>
+                        <button class="tab-button" data-tab="tab2">CSS</button>
+                        <button class="tab-button" data-tab="tab3">JavaScript</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-panel active">
+                            <h4>HyperText Markup Language</h4>
+                            <p>HTML is the standard markup language for creating web pages.</p>
+                        </div>
+                        <div id="tab2" class="tab-panel">
+                            <h4>Cascading Style Sheets</h4>
+                            <p>CSS describes how HTML elements are displayed on screen.</p>
+                        </div>
+                        <div id="tab3" class="tab-panel">
+                            <h4>JavaScript</h4>
+                            <p>JavaScript programs the behavior of web pages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📋✅ Part 3: Form Validation -->
+        <section class="section" id="form-validation">
+            <h2>📋✅ Form Validation</h2>
+            
+            <form id="validationForm" class="validation-form" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" min="13" max="120">
+                    <span class="error-message" id="ageError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions *</label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+
+            <div id="formSuccess" class="success-message" style="display: none;">
+                <h3>✅ Form Submitted Successfully!</h3>
+                <p>Thank you for your submission. All data has been validated.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with ❤️ using vanilla JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
